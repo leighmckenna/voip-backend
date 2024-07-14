@@ -21,4 +21,13 @@
 go.work
 go.work.sum
 
+# End of https://www.toptal.com/developers/gitignore/api/go
+
+# Python
 .venv
+
+# Shout out to macos lol
+.DS_Store
+
+# Lambda deployment files
+lambda.zip
