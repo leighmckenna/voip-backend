@@ -1,16 +1,8 @@
-module github.com/voip-backend
+module api
 
 go 1.22.5
 
 require github.com/gin-gonic/gin v1.10.0
-
-require internal/api v1.0.0
-replace internal/api => ./internal/app/api
-require internal/pkg/database v1.0.0
-replace internal/pkg/database => ./internal/app/pkg/database
-
-require pkg/dtos v1.0.0
-replace pkg/dtos => ./pkg/dtos
 
 require (
 	github.com/bytedance/sonic v1.11.6 // indirect
