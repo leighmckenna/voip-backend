@@ -16,6 +16,13 @@ spec:
       - name: voip-backend
         image: callicoder/voip-backend:1.0.0 
         imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "1024Mi"
+          requests:
+            cpu: "200m"
+            memory: "256Mi"
         ports:
           - containerPort: 8080  # Should match the port number that the Go application listens on
         livenessProbe:           # To check the health of the Pod
