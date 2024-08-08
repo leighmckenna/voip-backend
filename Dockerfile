@@ -1,7 +1,7 @@
 # Dockerfile References: https://docs.docker.com/engine/reference/builder/
 
 # Start from the latest golang base image
-FROM golang:1.22.5 as builder
+FROM golang:1.22.5 AS builder
 
 # Add Maintainer Info
 LABEL maintainer="Admin <admin@privacytg.com>"
@@ -16,7 +16,7 @@ COPY . .
 RUN go mod download
 
 # Build the Go app
-RUN CGO_ENABLED=0 GOOS=linux go build -C ./cmd -o ../server -a -installsuffix cgo
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -C ./cmd -o ../server -a -installsuffix cgo
 
 
 ######## Start a new stage from scratch #######

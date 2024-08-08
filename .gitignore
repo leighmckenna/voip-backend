@@ -31,3 +31,11 @@ go.work.sum
 
 # Lambda deployment files
 lambda.zip
+
+*certs/
+*.crt
+*.key
+*.pem
+*.csr
+*.srl
+csr.conf
